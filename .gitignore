@@ -1,3 +1,6 @@
-/target
-.env
-.Cargo.lock
+**/*.env
+**/*node_modules
+!config/sample.env
+**/*target
+**/*Cargo.lock
+**/*package-lock.json

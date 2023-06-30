@@ -23,7 +23,7 @@ pub struct User {
 }
 
 
-#[derive(Debug, Serialize, Deserialize,Clone, Default)]
+#[derive(Debug, Serialize, Deserialize, Clone, Default)]
 
 pub struct UserLogin {
    pub email: String,

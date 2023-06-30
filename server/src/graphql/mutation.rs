@@ -2,10 +2,10 @@
 use async_graphql::{FieldResult,  Context, Object};
 use mongodb::bson::{doc};
 use bcrypt::{verify}; 
-use crate::{types::user::{Signup,Login},  models::users::{User}, schema::AppContext};
+use crate::{types::{user::{Signup,Login}, org::CreateOrg},  models::{users::{User}, org::Organization}, schema::AppContext};
 
 
-pub struct MutationRoot;
+pub struct MutationRoot;    
 
 
 #[Object]
@@ -61,7 +61,28 @@ impl MutationRoot {
        
     }
 
+    async fn create_org(&self, ctx: &Context<'_>,org_input: CreateOrg) -> FieldResult<String>{
+        let db = ctx.data_opt::<AppContext>().to_owned().unwrap();
+        let collection = db.db.collection("organizations");
 
+        let name = org_input.org_name.to_owned();
+        
+        if name.is_empty() {
+            return Err("Name cannot be empty".into());
+        }
+
+        let doc = Organization::create_org(org_input);
+        
+        // checking user before allow them to signup
+        let org = collection.find_one(doc! {"org_name": name}, None).await?;
+        if org.is_some(){
+            return Err("Organization already exist.".into());
+        }
+
+        collection.insert_one(doc, None).await?;
+        Ok("School have been created!".to_string())
+
+    }
 
 
   
