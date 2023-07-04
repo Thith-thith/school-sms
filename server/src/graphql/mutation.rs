@@ -3,7 +3,7 @@ use async_graphql::{FieldResult,  Context, Object};
 use mongodb::bson::{doc};
 use bcrypt::{verify}; 
 use crate::{types::{user::{Signup,Login}, org::CreateOrg},  models::{users::{User}, org::Organization}, schema::AppContext};
-
+use jsonwebtoken::{decode, encode, DecodingKey, EncodingKey, Header, Validation};
 
 pub struct MutationRoot;    
 
@@ -36,9 +36,9 @@ impl MutationRoot {
         let find_user = collection.find_one(doc! {"email": email}, None).await?;
 
        let user = match find_user {
-        Some(user) => user,
+        Some(user) => user,       
         None => {
-            return Ok(serde_json::json!({
+            return Ok(serde_json::json!({   
              "status": "Failed",
              "message": "Invalid email or password"
             }));

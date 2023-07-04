@@ -1,19 +1,18 @@
-import { Router, Routes, Route } from "@solidjs/router";
-import { LandingPage } from "./pages/landing";
-import { About } from "./pages/about";
-import { Navbar } from "./components/layouts/navbar";
+import { Router, useRoutes } from "@solidjs/router";
+import "flowbite";
+import { routes } from "./utils/routes";
+import { AuthProvier } from "./context/auth";
+import { BackTop } from "./components/BackTop";
 
 function App() {
+  const Routes = useRoutes(routes);
   return (
-    <>
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path="/" component={LandingPage} />
-          <Route path="/about" component={About} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <AuthProvier>
+        <Routes />
+        <BackTop />
+      </AuthProvier>
+    </Router>
   );
 }
 

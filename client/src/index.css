@@ -1,17 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nokora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nokora&display=swap");
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  font-family: "Nokora", "Inter", sans-serif !important;
+}
+
+.background-img {
+  background-image: url("./assets/home.jpg");
+}
+.background-img-2 {
+  background-image: url("./assets/web3.jpg");
+  /* background-repeat: no-repeat; */
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
 }
