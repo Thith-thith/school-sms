@@ -34,7 +34,7 @@ async fn playground() -> HttpResponse {
     let html = playground_source(GraphQLPlaygroundConfig::new("/").subscription_endpoint("/"));
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
-        .body(html)
+        .body(html) 
 }
 
 #[actix_web::main]

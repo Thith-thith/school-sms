@@ -3,8 +3,6 @@ import { useLocation } from "@solidjs/router";
 export const Navbar = () => {
   const router = useLocation();
 
-  console.log(router.hash);
-
   return (
     <nav className="backdrop-blur-md bg-white/30 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">

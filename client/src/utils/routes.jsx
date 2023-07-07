@@ -1,4 +1,5 @@
 import { lazy } from "solid-js";
+import "flowbite";
 
 export const routes = [
   {
@@ -15,6 +16,16 @@ export const routes = [
   {
     path: "/register",
     component: lazy(() => import("../pages/register.jsx")),
+  },
+  {
+    path: "/",
+    component: lazy(() => import("../components/layouts/PrivateLayout")),
+    children: [
+      {
+        path: "/courses",
+        component: lazy(() => import("../pages/courses/index")),
+      },
+    ],
   },
   {
     path: "*",

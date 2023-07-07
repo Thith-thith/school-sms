@@ -32,7 +32,7 @@ export const Banner = () => {
   return (
     <section className="background-img w-full h-screen">
       <div className="backdrop-blur-md bg-white/30 w-full h-screen">
-        <div className=" h-screen mx-auto pt-9 max-w-screen-xl">
+        <div className="h-screen mx-auto pt-9 max-w-screen-xl">
           <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
             <a
               href="#"

@@ -3,7 +3,6 @@ use async_graphql::{FieldResult,  Context, Object};
 use mongodb::bson::{doc};
 use bcrypt::{verify}; 
 use crate::{types::{user::{Signup,Login}, org::CreateOrg},  models::{users::{User}, org::Organization}, schema::AppContext};
-use jsonwebtoken::{decode, encode, DecodingKey, EncodingKey, Header, Validation};
 
 pub struct MutationRoot;    
 
@@ -60,6 +59,8 @@ impl MutationRoot {
        }))
        
     }
+
+    
 
     async fn create_org(&self, ctx: &Context<'_>,org_input: CreateOrg) -> FieldResult<String>{
         let db = ctx.data_opt::<AppContext>().to_owned().unwrap();
