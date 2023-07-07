@@ -1,54 +1,13 @@
-import img from "../assets/images/weteka.png";
+import book from "../assets/images/cover-book.png";
 import logo from "../assets/images/koompi.webp";
 import moment from "moment";
 
-export const Course = (props) => {
-  const {
-    thumbnail,
-    title,
-    org,
-    viewer,
-    created_at,
-    is_free,
-    is_enrollment,
-    pricing,
-    progress,
-  } = props.course;
-
-  const stylebar = {
-    width: progress,
-  };
-
+export const Book = (props) => {
+  const { title, viewer, downloaded, created_at, updated_at, org } = props.book;
   return (
     <div className="transform transition duration-300 hover:scale-105 ">
-      <div className="absolute bottom-0 left-0 right-0 top-0 h-2/3 rounded-2xl w-full overflow-hidden bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 opacity-0 transition duration-300 ease-in-out hover:opacity-70 ">
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-16 h-16 text-white"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
-      <img className="rounded-2xl bg-cover hover:blur-lg " src={img} alt="" />
+      <img className="rounded-2xl bg-cover " src={book} alt="" />
 
-      {is_enrollment && (
-        <div className="absolute px-1 w-full bottom-20 m-0">
-          <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700 ">
-            <div
-              className="bg-red-500 h-1.5 rounded-full dark:bg-blue-500"
-              style={stylebar}
-            />
-          </div>
-        </div>
-      )}
       <div className="flex flex-row justify-between items-start mt-4">
         <div>
           <p className="text-sm text-gray-800 font-bold">{title}</p>
@@ -77,13 +36,10 @@ export const Course = (props) => {
                 )}
               </div>
               <div className="text-sm text-gray-500 dark:text-gray-400">
-                {viewer} views - {moment(created_at, "YYYYMMDD").fromNow()}
+                {viewer} read - {moment(updated_at, "YYYYMMDD").fromNow()}
               </div>
             </div>
           </div>
-        </div>
-        <div className="font-bold">
-          {is_free ? "" : <p className="text-md">${pricing}</p>}
         </div>
       </div>
     </div>

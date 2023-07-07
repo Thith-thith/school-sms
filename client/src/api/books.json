@@ -1,0 +1,82 @@
+[
+  {
+    "thumbnail": "../assets/images/weteka.png",
+    "title": "How to use Weteka?",
+    "viewer": "1200",
+    "downloaded": "120",
+    "created_at": "20220507",
+    "updated_at": "20220607",
+    "languages": "Khmer",
+    "categories": "teachnology",
+    "rates": "4.5",
+    "org": {
+      "name": "Weteka",
+      "logo": "../assets/images/koompi.webp",
+      "is_verify": false
+    }
+  },
+  {
+    "thumbnail": "../assets/images/weteka.png",
+    "title": "How to use Weteka?",
+    "viewer": "1200",
+    "downloaded": "120",
+    "created_at": "20220507",
+    "updated_at": "20220607",
+    "languages": "Khmer",
+    "categories": "teachnology",
+    "rates": "4.5",
+    "org": {
+      "name": "Weteka",
+      "logo": "../assets/images/koompi.webp",
+      "is_verify": true
+    }
+  },
+  {
+    "thumbnail": "../assets/images/weteka.png",
+    "title": "How to use Weteka?",
+    "viewer": "1200",
+    "downloaded": "120",
+    "created_at": "20220507",
+    "updated_at": "20220607",
+    "languages": "Khmer",
+    "categories": "teachnology",
+    "rates": "4.5",
+    "org": {
+      "name": "Weteka",
+      "logo": "../assets/images/koompi.webp",
+      "is_verify": false
+    }
+  },
+  {
+    "thumbnail": "../assets/images/weteka.png",
+    "title": "How to use Weteka?",
+    "viewer": "1200",
+    "downloaded": "120",
+    "created_at": "20220507",
+    "updated_at": "20220607",
+    "languages": "Khmer",
+    "categories": "teachnology",
+    "rates": "4.5",
+    "org": {
+      "name": "Weteka",
+      "logo": "../assets/images/koompi.webp",
+      "is_verify": true
+    }
+  },
+  {
+    "thumbnail": "../assets/images/weteka.png",
+    "title": "How to use Weteka?",
+    "viewer": "1200",
+    "downloaded": "120",
+    "created_at": "20220507",
+    "updated_at": "20220607",
+    "languages": "Khmer",
+    "categories": "teachnology",
+    "rates": "4.5",
+    "org": {
+      "name": "Weteka",
+      "logo": "../assets/images/koompi.webp",
+      "is_verify": false
+    }
+  }
+]

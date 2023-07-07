@@ -16,9 +16,17 @@ body {
 .background-img {
   background-image: url("./assets/home.jpg");
 }
+
 .background-img-2 {
   background-image: url("./assets/web3.jpg");
   /* background-repeat: no-repeat; */
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+.background-img-3 {
+  background-image: url("./assets/home.jpg");
+  background-repeat: repeat;
   object-fit: cover;
   background-size: cover;
   background-position: center;

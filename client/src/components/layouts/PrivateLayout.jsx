@@ -15,7 +15,9 @@ const PrivateLayout = () => {
   return (
     <Show when={!value.login} fallback={<LandingPage />}>
       <PrivateNavbar />
-      <Outlet />
+      <div className="mt-20">
+        <Outlet />
+      </div>
     </Show>
   );
 };

@@ -22,8 +22,8 @@ export const routes = [
     component: lazy(() => import("../components/layouts/PrivateLayout")),
     children: [
       {
-        path: "/courses",
-        component: lazy(() => import("../pages/courses/index")),
+        path: "/home",
+        component: lazy(() => import("../pages/home/index")),
       },
     ],
   },
